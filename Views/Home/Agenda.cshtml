@@ -1,0 +1,35 @@
+@model List<AgendamentoViewModel>;
+
+@{
+    ViewData["Title"] = "Agenda";
+}
+
+<div class="container text-center">
+    <h5>Agenda</h5>
+    <div class="d-flex justify-content-center">
+        <table class="table table-hover">
+            <thead>
+                <th scope="col">Nome</th>
+                <th scope="col">Telefone</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Data</th>
+                <th scope="col">Animal</th>
+                <th scope="col">Necessidade</th>
+            </thead>
+            <tbody>
+                @foreach (AgendamentoViewModel a in Model)
+                {
+                    <tr>
+                        <td id="campo-nome">@a.Nome</td>
+                        <td id="campo-telefone">@a.Telefone</td>
+                        <td id="campo-email">@a.Email</td>
+                        <td id="campo-data">@a.Data</td>
+                        <td id="campo-animal">@a.Animal</td>
+                        <td id="campo-necessidade">@a.Necessidade</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <a class="btn btn-secondary" asp-action="Index">Voltar</a>
+</div>

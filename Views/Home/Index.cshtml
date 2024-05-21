@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<style>
+    #div-imagem {
+        width: 80%;
+        height: 250px;
+    }
+
+    #div-texto {
+        width: 80%;
+    }
+</style>
+
+<div class="container text-center">
+    <div>
+        <h2 class="mb-3">Bem-vindo(a) à PetVet</h2>
+        <div class="border mx-auto mb-3" id="div-imagem">
+            <img src="" alt="Imagem">
+        </div>
+        <div class="mx-auto mb-3 text-center" id="div-texto">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur, illum provident! Velit dolorem, id, iure cum fuga error accusamus voluptatibus, natus voluptate perferendis modi veritatis illum officia! Nisi, fugit dolorum. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem praesentium fugit ratione rem non illo nostrum quod, necessitatibus vero enim iure blanditiis magnam ipsam quasi? Ipsam saepe animi enim quam!</p>
+        </div>
+    </div>
+</div>
+
+
+@if (TempData["Error"] != null)
+{
+    <script>
+        alert("@TempData["Error"]");
+    </script>
+}
