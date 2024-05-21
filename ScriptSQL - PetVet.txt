@@ -1,0 +1,18 @@
+CREATE DATABASE IF NOT EXISTS PetVet;
+USE PetVet;
+
+CREATE TABLE IF NOT EXISTS pre_agendamento (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nome VARCHAR(100) NOT NULL,
+  telefone VARCHAR(15),
+  email VARCHAR(100),
+  dataHora DATETIME,
+  animal VARCHAR(20),
+  necessidade VARCHAR(200)
+);
+
+INSERT INTO pre_agendamento (nome, telefone, email, dataHora, animal, necessidade) 
+VALUES 
+('Raul', '12345678901', 'raul@exemplo.com', '2024-05-17 15:00:00', 'Cachorro', 'Vacinação, Banho e Tosa');
+
+SELECT * FROM pre_agendamento;
